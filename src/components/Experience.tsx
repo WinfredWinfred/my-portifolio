@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, Briefcase } from 'lucide-react';
 import { experiences } from '../data/portfolio';
 
 const Experience = () => {
