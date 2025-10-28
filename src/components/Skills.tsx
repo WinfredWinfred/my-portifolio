@@ -5,31 +5,31 @@ const Skills = () => {
   const getLevelColor = (level?: string) => {
     switch (level) {
       case 'expert':
-        return 'bg-gradient-to-r from-green-500 to-emerald-500 text-white';
+        return 'bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900';
       case 'advanced':
-        return 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white';
+        return 'bg-gradient-to-r from-amber-500 to-orange-500 text-gray-900';
       case 'intermediate':
-        return 'bg-gradient-to-r from-yellow-500 to-orange-500 text-white';
+        return 'bg-gradient-to-r from-violet-500 to-purple-500 text-white';
       case 'beginner':
-        return 'bg-gradient-to-r from-gray-500 to-gray-600 text-white';
+        return 'bg-gradient-to-r from-gray-600 to-gray-700 text-white';
       default:
-        return 'bg-gradient-to-r from-primary-500 to-secondary-500 text-white';
+        return 'bg-gradient-to-r from-amber-400 to-violet-500 text-white';
     }
   };
 
   return (
     <section
       id="skills"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors"
+      className="py-20 bg-[#1a1a1a] transition-colors"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
             Skills & Expertise
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full shadow-lg shadow-amber-400/50"></div>
+          <p className="mt-4 text-lg text-[#d4d4d4] max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
         </div>
@@ -43,10 +43,10 @@ const Skills = () => {
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
               {/* Category Card */}
-              <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500 transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/10">
+              <div className="h-full p-6 rounded-2xl bg-[#2d2d2d] border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-amber-400/20 hover:scale-105">
                 {/* Category Title */}
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-                  <span className="w-2 h-2 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mr-3"></span>
+                <h3 className="text-xl font-bold text-amber-400 mb-6 flex items-center">
+                  <span className="w-2 h-2 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-3 animate-pulse"></span>
                   {category.category}
                 </h3>
 
@@ -72,20 +72,20 @@ const Skills = () => {
         {/* Skill Level Legend */}
         <div className="mt-12 flex flex-wrap justify-center gap-4 text-sm">
           <div className="flex items-center space-x-2">
-            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Expert</span>
+            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500"></span>
+            <span className="text-[#d4d4d4]">Expert</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Advanced</span>
+            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
+            <span className="text-[#d4d4d4]">Advanced</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-yellow-500 to-orange-500"></span>
-            <span className="text-gray-600 dark:text-gray-400">Intermediate</span>
+            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-violet-500 to-purple-500"></span>
+            <span className="text-[#d4d4d4]">Intermediate</span>
           </div>
           <div className="flex items-center space-x-2">
-            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-gray-500 to-gray-600"></span>
-            <span className="text-gray-600 dark:text-gray-400">Beginner</span>
+            <span className="w-3 h-3 rounded-full bg-gradient-to-r from-gray-600 to-gray-700"></span>
+            <span className="text-[#d4d4d4]">Beginner</span>
           </div>
         </div>
       </div>

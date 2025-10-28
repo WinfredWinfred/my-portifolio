@@ -44,7 +44,7 @@ const Header = ({ activeSection }: HeaderProps) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-dark-900/90 backdrop-blur-xl shadow-2xl shadow-primary-500/10 border-b border-primary-500/10'
+          ? 'bg-[#1a1a1a]/90 backdrop-blur-xl shadow-2xl shadow-amber-400/10 border-b border-amber-400/10'
           : 'bg-transparent'
       }`}
     >
@@ -60,10 +60,10 @@ const Header = ({ activeSection }: HeaderProps) => {
             className="group flex items-center gap-3 text-2xl font-display font-bold hover:scale-105 transition-all duration-300"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-primary-400 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <Sparkles className="relative w-8 h-8 text-primary-400" />
+              <div className="absolute inset-0 bg-amber-400 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <Sparkles className="relative w-8 h-8 text-amber-400" />
             </div>
-            <span className="bg-gradient-to-r from-primary-400 via-primary-300 to-secondary-400 bg-clip-text text-transparent">My Portfolio</span>
+            <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">My Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -78,8 +78,8 @@ const Header = ({ activeSection }: HeaderProps) => {
                 }}
                 className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group ${
                   activeSection === item.href.slice(1)
-                    ? 'text-primary-400'
-                    : 'text-dark-200 hover:text-primary-300'
+                    ? 'text-amber-400'
+                    : 'text-[#d4d4d4] hover:text-amber-300'
                 }`}
               >
                 {item.label}

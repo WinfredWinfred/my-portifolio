@@ -17,16 +17,16 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a]"
     >
       {/* Dot Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-10"></div>
       
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-primary-500 to-orange-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-secondary-500 to-purple-600 rounded-full mix-blend-screen filter blur-3xl opacity-25 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-amber-400 to-primary-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-amber-400 to-amber-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-float"></div>
+        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-violet-500 to-purple-600 rounded-full mix-blend-screen filter blur-3xl opacity-25 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-amber-400 to-violet-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
       
       {/* Noise Texture Overlay */}
@@ -36,9 +36,6 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Name and Title */}
           <div className="space-y-4">
-            <h1 className="text-4xl text-white/80 font-normal animate-fade-in tracking-wide">
-              Hello, I'm
-            </h1>
             <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold leading-none tracking-tight">
               <span className="block bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto] animate-shimmer">
                 {personalInfo.name}
@@ -62,7 +59,7 @@ const Hero = () => {
             {/* Email */}
             <a
               href={`mailto:${contactInfo.email}`}
-              className="flex items-center gap-3 p-4 bg-slate-800/50 backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-slate-800/70 transition-all duration-300 group"
+              className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300 group"
             >
               <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-400 transition-colors">
                 <Mail className="w-5 h-5 text-amber-400 group-hover:text-slate-900" />
@@ -77,14 +74,14 @@ const Hero = () => {
             {contactInfo.phone && (
               <a
                 href="tel:+256752674690"
-                className="flex items-center gap-3 p-4 bg-slate-800/50 backdrop-blur-xl rounded-xl border border-purple-400/20 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all duration-300 group"
+                className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-violet-400/20 hover:border-violet-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-violet-400/20 transition-all duration-300 group"
               >
-                <div className="p-2 bg-purple-400/10 rounded-lg group-hover:bg-purple-400 transition-colors">
-                  <Phone className="w-5 h-5 text-purple-400 group-hover:text-slate-900" />
+                <div className="p-2 bg-violet-400/10 rounded-lg group-hover:bg-violet-400 transition-colors">
+                  <Phone className="w-5 h-5 text-violet-400 group-hover:text-gray-900" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-gray-400">Phone</p>
-                  <p className="text-sm text-white font-medium">{contactInfo.phone}</p>
+                  <p className="text-xs text-[#a3a3a3]">Phone</p>
+                  <p className="text-sm text-[#fafafa] font-medium">{contactInfo.phone}</p>
                 </div>
               </a>
             )}
@@ -95,14 +92,14 @@ const Hero = () => {
                 href="https://www.google.com/maps/place/Kampala,+Uganda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-slate-800/50 backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-slate-800/70 transition-all duration-300 group"
+                className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300 group"
               >
                 <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-400 transition-colors">
-                  <MapPin className="w-5 h-5 text-amber-400 group-hover:text-slate-900" />
+                  <MapPin className="w-5 h-5 text-amber-400 group-hover:text-gray-900" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-gray-400">Location</p>
-                  <p className="text-sm text-white font-medium">{contactInfo.location}</p>
+                  <p className="text-xs text-[#a3a3a3]">Location</p>
+                  <p className="text-sm text-[#fafafa] font-medium">{contactInfo.location}</p>
                 </div>
               </a>
             )}
@@ -150,7 +147,7 @@ const Hero = () => {
           {/* Scroll Indicator */}
           <button
             onClick={() => scrollToSection('#skills')}
-            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-slate-800/50 backdrop-blur-xl border border-amber-400/30 hover:border-amber-400/60 animate-bounce hover:animate-none transition-all duration-300 group"
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#3a3a3a] backdrop-blur-xl border border-amber-400/30 hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-400/30 animate-bounce hover:animate-none transition-all duration-300 group"
             aria-label="Scroll down"
           >
             <ArrowDown className="w-6 h-6 text-amber-400 group-hover:text-amber-300" />
