@@ -1,0 +1,5 @@
+Please save your profile image as:
+- avatar.jpg (for the profile picture in the hero section)
+- favicon.ico or favicon.png (for the browser tab icon)
+
+Place both files in the public/ folder.

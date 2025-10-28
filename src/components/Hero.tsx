@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, Download, ArrowDown } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ArrowDown, Hexagon } from 'lucide-react';
 import { personalInfo, socialLinks } from '../data/portfolio';
 
 const Hero = () => {
@@ -6,7 +6,6 @@ const Hero = () => {
     const icons: { [key: string]: JSX.Element } = {
       github: <Github className="w-5 h-5" />,
       linkedin: <Linkedin className="w-5 h-5" />,
-      twitter: <Twitter className="w-5 h-5" />,
       mail: <Mail className="w-5 h-5" />
     };
     return icons[iconName] || null;
@@ -22,7 +21,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 dark:from-gray-950 dark:via-purple-950 dark:to-gray-950"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-900 via-teal-900 to-indigo-900 dark:from-gray-950 dark:via-teal-950 dark:to-indigo-950"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -46,14 +45,18 @@ const Hero = () => {
           {/* Name and Title */}
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white">
-              Hi, I'm{' '}
+              Hello, am{' '}
               <span className="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
                 {personalInfo.name}
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">
-              {personalInfo.title}
-            </p>
+            <div className="flex items-center justify-center gap-3">
+              <Hexagon className="w-6 h-6 text-primary-400 fill-primary-400/20" />
+              <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-medium">
+                {personalInfo.title}
+              </p>
+              <Hexagon className="w-6 h-6 text-secondary-400 fill-secondary-400/20" />
+            </div>
           </div>
 
           {/* Bio */}

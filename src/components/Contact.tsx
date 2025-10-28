@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin } from 'lucide-react';
 import { contactInfo, socialLinks } from '../data/portfolio';
 
 const Contact = () => {
@@ -38,7 +38,6 @@ const Contact = () => {
     const icons: { [key: string]: JSX.Element } = {
       github: <Github className="w-5 h-5" />,
       linkedin: <Linkedin className="w-5 h-5" />,
-      twitter: <Twitter className="w-5 h-5" />,
       mail: <Mail className="w-5 h-5" />
     };
     return icons[iconName] || null;

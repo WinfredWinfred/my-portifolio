@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, Hexagon } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -57,9 +57,10 @@ const Header = ({ activeSection }: HeaderProps) => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
-            Portfolio
+            <Hexagon className="w-7 h-7 text-primary-500 fill-primary-500/20" />
+            <span>My Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}

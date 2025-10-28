@@ -2,10 +2,10 @@ import { PersonalInfo, SocialLink, SkillCategory, Project, Experience, ContactIn
 
 // Personal Information
 export const personalInfo: PersonalInfo = {
-  name: 'Your Name',
-  title: 'Full Stack Developer',
-  bio: 'Passionate developer with expertise in building modern web applications. I love creating elegant solutions to complex problems and continuously learning new technologies.',
-  avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=YourName',
+  name: 'Winfred',
+  title: 'Web3 Full Stack Developer',
+  bio: 'Passionate Web3 developer specializing in blockchain technology and decentralized applications. I build innovative solutions that bridge traditional web development with the decentralized future.',
+  avatar: '/avatar.jpg',
   resumeUrl: '/resume.pdf'
 };
 
@@ -13,39 +13,42 @@ export const personalInfo: PersonalInfo = {
 export const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
-    url: 'https://github.com/yourusername',
+    url: 'https://github.com/WinfredWinfred',
     icon: 'github'
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://www.linkedin.com/in/nsooli-winfred-980572208/',
     icon: 'linkedin'
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/yourusername',
-    icon: 'twitter'
-  },
-  {
-    name: 'Email',
-    url: 'mailto:your.email@example.com',
-    icon: 'mail'
   }
 ];
 
 // Skills organized by category
 export const skills: SkillCategory[] = [
   {
+    category: 'Web3 & Blockchain',
+    skills: [
+      { name: 'Solidity', level: 'expert' },
+      { name: 'Ethereum', level: 'expert' },
+      { name: 'Smart Contracts', level: 'expert' },
+      { name: 'Web3.js', level: 'advanced' },
+      { name: 'Ethers.js', level: 'advanced' },
+      { name: 'Hardhat', level: 'advanced' },
+      { name: 'IPFS', level: 'intermediate' },
+      { name: 'DeFi', level: 'advanced' }
+    ]
+  },
+  {
     category: 'Frontend',
     skills: [
       { name: 'React', level: 'expert' },
       { name: 'TypeScript', level: 'expert' },
       { name: 'JavaScript', level: 'expert' },
+      { name: 'Next.js', level: 'advanced' },
+      { name: 'Tailwind CSS', level: 'advanced' },
       { name: 'HTML5', level: 'expert' },
       { name: 'CSS3', level: 'expert' },
-      { name: 'Tailwind CSS', level: 'advanced' },
-      { name: 'Next.js', level: 'advanced' },
-      { name: 'Vue.js', level: 'intermediate' }
+      { name: 'Web3 UI', level: 'advanced' }
     ]
   },
   {
@@ -53,12 +56,12 @@ export const skills: SkillCategory[] = [
     skills: [
       { name: 'Node.js', level: 'advanced' },
       { name: 'Express', level: 'advanced' },
-      { name: 'Python', level: 'intermediate' },
-      { name: 'Django', level: 'intermediate' },
       { name: 'PostgreSQL', level: 'advanced' },
       { name: 'MongoDB', level: 'advanced' },
       { name: 'REST APIs', level: 'expert' },
-      { name: 'GraphQL', level: 'intermediate' }
+      { name: 'GraphQL', level: 'intermediate' },
+      { name: 'Python', level: 'intermediate' },
+      { name: 'Rust', level: 'intermediate' }
     ]
   },
   {
