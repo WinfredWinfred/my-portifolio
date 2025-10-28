@@ -8,7 +8,11 @@ interface HeaderProps {
 const Header = ({ activeSection }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+    // Check localStorage or default to dark
+    const saved = localStorage.getItem('theme');
+    return saved === 'light' ? false : true;
+  });
 
   const navItems = [
     { label: 'Home', href: '#home' },
@@ -27,9 +31,19 @@ const Header = ({ activeSection }: HeaderProps) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Apply theme on mount and when isDark changes
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
   const toggleTheme = () => {
     setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
   };
 
   const scrollToSection = (href: string) => {
@@ -89,13 +103,13 @@ const Header = ({ activeSection }: HeaderProps) => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+              className="p-2 rounded-lg bg-[#3a3a3a] border border-amber-400/20 hover:border-amber-400/50 hover:bg-[#2d2d2d] transition-all duration-300"
               aria-label="Toggle theme"
             >
               {isDark ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
+                <Sun className="w-5 h-5 text-amber-400" />
               ) : (
-                <Moon className="w-5 h-5 text-gray-700" />
+                <Moon className="w-5 h-5 text-amber-400" />
               )}
             </button>
           </div>
@@ -104,24 +118,24 @@ const Header = ({ activeSection }: HeaderProps) => {
           <div className="flex items-center space-x-4 md:hidden">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800"
+              className="p-2 rounded-lg bg-[#3a3a3a] border border-amber-400/20"
               aria-label="Toggle theme"
             >
               {isDark ? (
-                <Sun className="w-5 h-5 text-yellow-500" />
+                <Sun className="w-5 h-5 text-amber-400" />
               ) : (
-                <Moon className="w-5 h-5 text-gray-700" />
+                <Moon className="w-5 h-5 text-amber-400" />
               )}
             </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800"
+              className="p-2 rounded-lg bg-[#3a3a3a] border border-amber-400/20"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <X className="w-6 h-6 text-amber-400" />
               ) : (
-                <Menu className="w-6 h-6 text-gray-700 dark:text-gray-300" />
+                <Menu className="w-6 h-6 text-amber-400" />
               )}
             </button>
           </div>

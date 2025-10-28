@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a] pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-[#1a1a1a] dark:via-[#2d2d2d] dark:to-[#1a1a1a] pt-20"
     >
       {/* Dot Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-10"></div>
@@ -36,12 +36,11 @@ const Hero = () => {
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
           {/* Profile Image Icon */}
           <div className="relative group animate-scale-in">
-            <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-full blur-lg opacity-40 group-hover:opacity-60 animate-glow transition duration-500"></div>
             <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-full opacity-75 animate-spin" style={{ animationDuration: '8s' }}></div>
             <img
               src="/IMGP9895~3.jpg"
               alt="Profile"
-              className="relative w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#1a1a1a] object-cover shadow-2xl shadow-amber-400/30 ring-2 ring-amber-400/50"
+              className="relative w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-white dark:border-[#1a1a1a] object-cover ring-2 ring-amber-400/50"
             />
           </div>
 
@@ -61,7 +60,7 @@ const Hero = () => {
           </div>
 
           {/* Bio */}
-          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed font-light tracking-wide mt-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-light tracking-wide mt-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             {personalInfo.bio}
           </p>
 
@@ -70,14 +69,14 @@ const Hero = () => {
             {/* Email */}
             <a
               href={`mailto:${contactInfo.email}`}
-              className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300 group"
+              className="flex items-center gap-3 p-4 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-500/50 hover:bg-gray-50 dark:hover:bg-[#2d2d2d] transition-all duration-300 group"
             >
-              <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-400 transition-colors">
-                <Mail className="w-5 h-5 text-amber-400 group-hover:text-slate-900" />
+              <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-500 transition-colors">
+                <Mail className="w-5 h-5 text-amber-500 dark:text-amber-400 group-hover:text-white dark:group-hover:text-gray-900" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-gray-400">Email</p>
-                <p className="text-sm text-white font-medium truncate">{contactInfo.email}</p>
+                <p className="text-xs text-gray-500 dark:text-[#a3a3a3]">Email</p>
+                <p className="text-sm text-gray-900 dark:text-[#fafafa] font-medium truncate">{contactInfo.email}</p>
               </div>
             </a>
 
@@ -85,14 +84,14 @@ const Hero = () => {
             {contactInfo.phone && (
               <a
                 href="tel:+256752674690"
-                className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-violet-400/20 hover:border-violet-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-violet-400/20 transition-all duration-300 group"
+                className="flex items-center gap-3 p-4 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-violet-400/20 hover:border-violet-500/50 hover:bg-gray-50 dark:hover:bg-[#2d2d2d] transition-all duration-300 group"
               >
-                <div className="p-2 bg-violet-400/10 rounded-lg group-hover:bg-violet-400 transition-colors">
-                  <Phone className="w-5 h-5 text-violet-400 group-hover:text-gray-900" />
+                <div className="p-2 bg-violet-400/10 rounded-lg group-hover:bg-violet-500 transition-colors">
+                  <Phone className="w-5 h-5 text-violet-500 dark:text-violet-400 group-hover:text-white dark:group-hover:text-gray-900" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-[#a3a3a3]">Phone</p>
-                  <p className="text-sm text-[#fafafa] font-medium">{contactInfo.phone}</p>
+                  <p className="text-xs text-gray-500 dark:text-[#a3a3a3]">Phone</p>
+                  <p className="text-sm text-gray-900 dark:text-[#fafafa] font-medium">{contactInfo.phone}</p>
                 </div>
               </a>
             )}
@@ -103,14 +102,14 @@ const Hero = () => {
                 href="https://www.google.com/maps/place/Kampala,+Uganda"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-[#2d2d2d] hover:shadow-xl hover:shadow-amber-400/20 transition-all duration-300 group"
+                className="flex items-center gap-3 p-4 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-500/50 hover:bg-gray-50 dark:hover:bg-[#2d2d2d] transition-all duration-300 group"
               >
-                <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-400 transition-colors">
-                  <MapPin className="w-5 h-5 text-amber-400 group-hover:text-gray-900" />
+                <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-500 transition-colors">
+                  <MapPin className="w-5 h-5 text-amber-500 dark:text-amber-400 group-hover:text-white dark:group-hover:text-gray-900" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-[#a3a3a3]">Location</p>
-                  <p className="text-sm text-[#fafafa] font-medium">{contactInfo.location}</p>
+                  <p className="text-xs text-gray-500 dark:text-[#a3a3a3]">Location</p>
+                  <p className="text-sm text-gray-900 dark:text-[#fafafa] font-medium">{contactInfo.location}</p>
                 </div>
               </a>
             )}
@@ -137,7 +136,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <button
               onClick={() => scrollToSection('#projects')}
-              className="group relative px-8 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-gray-900 font-semibold text-lg rounded-full hover:shadow-2xl hover:shadow-amber-400/50 hover:scale-105 transition-all duration-300 overflow-hidden flex items-center gap-2"
+              className="group relative px-8 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-gray-900 font-semibold text-lg rounded-full hover:scale-105 transition-all duration-300 overflow-hidden flex items-center gap-2"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative">View My Work</span>
@@ -147,7 +146,7 @@ const Hero = () => {
               <a
                 href={personalInfo.resumeUrl}
                 download
-                className="group px-8 py-3 border-2 border-amber-400 text-amber-400 bg-transparent font-semibold text-lg rounded-full hover:bg-amber-400/10 hover:shadow-lg hover:shadow-amber-400/30 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="group px-8 py-3 border-2 border-amber-400 text-amber-400 bg-transparent font-semibold text-lg rounded-full hover:bg-amber-400/10 hover:scale-105 transition-all duration-300 flex items-center gap-2"
               >
                 <Download className="w-5 h-5 group-hover:animate-bounce" />
                 <span>Download CV</span>
@@ -158,7 +157,7 @@ const Hero = () => {
           {/* Scroll Indicator */}
           <button
             onClick={() => scrollToSection('#skills')}
-            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-[#3a3a3a] backdrop-blur-xl border border-amber-400/30 hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-400/30 animate-bounce hover:animate-none transition-all duration-300 group"
+            className="absolute bottom-12 left-1/2 transform -translate-x-1/2 p-3 rounded-full bg-white dark:bg-[#3a3a3a] backdrop-blur-xl border border-amber-400/30 hover:border-amber-400/60 animate-bounce hover:animate-none transition-all duration-300 group"
             aria-label="Scroll down"
           >
             <ArrowDown className="w-6 h-6 text-amber-400 group-hover:text-amber-300" />

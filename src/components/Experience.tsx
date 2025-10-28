@@ -13,7 +13,7 @@ const Experience = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
             Work Experience
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full shadow-lg shadow-amber-400/50"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-[#d4d4d4] max-w-2xl mx-auto">
             My professional journey and the roles I've held
           </p>
@@ -23,7 +23,7 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-amber-400 via-amber-500 to-violet-500 shadow-lg shadow-amber-400/30"></div>
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-amber-400 via-amber-500 to-violet-500"></div>
 
             {/* Experience Items */}
             {experiences.map((exp, index) => (
@@ -36,7 +36,7 @@ const Experience = () => {
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-8">
-                  <div className="w-4 h-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 border-4 border-[#1a1a1a] shadow-lg shadow-amber-400/50 animate-pulse"></div>
+                  <div className="w-4 h-4 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 border-4 border-gray-50 dark:border-[#1a1a1a] animate-pulse"></div>
                 </div>
 
                 {/* Experience Card */}
@@ -45,11 +45,11 @@ const Experience = () => {
                     index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
                   }`}
                 >
-                  <div className="bg-[#2d2d2d] rounded-2xl p-6 border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-amber-400/20">
+                  <div className="bg-white dark:bg-[#2d2d2d] rounded-2xl p-6 border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300">
                     {/* Current Badge */}
                     {exp.current && (
                       <div className="inline-block mb-3">
-                        <span className="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 text-xs font-bold rounded-full shadow-lg shadow-amber-400/50">
+                        <span className="px-3 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 text-xs font-bold rounded-full">
                           Current Position
                         </span>
                       </div>

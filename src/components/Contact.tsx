@@ -22,7 +22,7 @@ const Contact = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
             Get In Touch
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full shadow-lg shadow-amber-400/50"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-[#d4d4d4] max-w-2xl mx-auto">
             Have a question or want to work together? Feel free to reach out!
           </p>
@@ -39,7 +39,7 @@ const Contact = () => {
                 {/* Email */}
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="flex items-center space-x-4 p-6 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-amber-400/20 group"
+                  className="flex items-center space-x-4 p-6 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 group"
                 >
                   <div className="p-3 bg-amber-400/10 rounded-lg group-hover:bg-amber-400 transition-colors">
                     <Mail className="w-6 h-6 text-amber-400 group-hover:text-slate-900" />
@@ -54,7 +54,7 @@ const Contact = () => {
                 {contactInfo.phone && (
                   <a
                     href={`tel:${contactInfo.phone}`}
-                    className="flex items-center space-x-4 p-6 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-violet-400/20 hover:border-violet-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-violet-400/20 group"
+                    className="flex items-center space-x-4 p-6 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-violet-400/20 hover:border-violet-400/50 transition-all duration-300 group"
                   >
                     <div className="p-3 bg-violet-400/10 rounded-lg group-hover:bg-violet-400 transition-colors">
                       <Phone className="w-6 h-6 text-violet-400 group-hover:text-gray-900" />
@@ -68,7 +68,7 @@ const Contact = () => {
 
                 {/* Location */}
                 {contactInfo.location && (
-                  <div className="flex items-center space-x-4 p-6 bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20">
+                  <div className="flex items-center space-x-4 p-6 bg-white dark:bg-[#3a3a3a] backdrop-blur-xl rounded-xl border border-amber-400/20">
                     <div className="p-3 bg-amber-400/10 rounded-lg">
                       <MapPin className="w-6 h-6 text-amber-400" />
                     </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-4 rounded-xl bg-[#3a3a3a] backdrop-blur-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-amber-400/10 hover:scale-110 transition-all duration-300 text-amber-400 hover:shadow-lg hover:shadow-amber-400/30"
+                    className="p-4 rounded-xl bg-white dark:bg-[#3a3a3a] backdrop-blur-xl border border-amber-400/20 hover:border-amber-400/50 hover:bg-amber-400/10 hover:scale-110 transition-all duration-300 text-amber-500 dark:text-amber-400"
                     aria-label={link.name}
                   >
                     {getIcon(link.icon)}
@@ -104,7 +104,7 @@ const Contact = () => {
 
             {/* Availability */}
             {contactInfo.availability && (
-              <div className="p-8 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl text-gray-900 text-center shadow-xl shadow-amber-400/30">
+              <div className="p-8 bg-gradient-to-br from-amber-400 to-amber-500 rounded-2xl text-gray-900 text-center">
                 <h3 className="text-xl font-bold mb-2">Availability</h3>
                 <p className="text-gray-900 font-medium">{contactInfo.availability}</p>
               </div>

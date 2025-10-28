@@ -44,22 +44,22 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 dark:from-[#1a1a1a] dark:via-[#2d2d2d] dark:to-[#1a1a1a] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-20"></div>
         <div className="text-center relative z-10">
           <div className="relative w-24 h-24 mx-auto mb-6">
-            <div className="absolute inset-0 border-4 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
-            <div className="absolute inset-2 border-4 border-amber-500 border-t-transparent rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}></div>
+            <div className="absolute inset-0 border-4 border-amber-500 border-t-transparent rounded-full animate-spin"></div>
+            <div className="absolute inset-2 border-4 border-amber-600 border-t-transparent rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '0.8s' }}></div>
             <div className="absolute inset-0 bg-amber-400/20 rounded-full blur-xl animate-pulse"></div>
           </div>
-          <p className="text-amber-400 text-2xl font-display font-bold animate-pulse">Loading...</p>
+          <p className="text-amber-600 dark:text-amber-400 text-2xl font-display font-bold animate-pulse">Loading...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] transition-colors">
+    <div className="min-h-screen bg-gray-50 dark:bg-[#1a1a1a] transition-colors">
       <Header activeSection={activeSection} />
       
       <main>

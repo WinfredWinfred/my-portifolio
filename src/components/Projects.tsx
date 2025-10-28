@@ -13,7 +13,7 @@ const Projects = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
             Featured Projects
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full shadow-lg shadow-amber-400/50"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-[#d4d4d4] max-w-2xl mx-auto">
             A collection of projects I've worked on, showcasing my skills and experience
           </p>
@@ -30,7 +30,7 @@ const Projects = () => {
               {/* Featured Badge */}
               {project.featured && (
                 <div className="absolute -top-3 -right-3 z-10">
-                  <div className="bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 shadow-lg shadow-amber-400/50">
+                  <div className="bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
                     <Star className="w-3 h-3 fill-current" />
                     <span>Featured</span>
                   </div>
@@ -38,7 +38,7 @@ const Projects = () => {
               )}
 
               {/* Project Card */}
-              <div className="h-full bg-[#3a3a3a] rounded-2xl overflow-hidden border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-400/20 hover:-translate-y-2">
+              <div className="h-full bg-white dark:bg-[#3a3a3a] rounded-2xl overflow-hidden border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:-translate-y-2">
                 {/* Project Image/Gradient */}
                 <div className="h-48 bg-gradient-to-br from-amber-400 via-amber-500 to-violet-500 relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
@@ -115,7 +115,7 @@ const Projects = () => {
             href="https://github.com/WinfredWinfred"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 font-semibold rounded-lg hover:shadow-lg hover:shadow-amber-400/50 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 font-semibold rounded-lg hover:scale-105 transition-all duration-300"
           >
             <Github className="w-5 h-5" />
             <span>View More on GitHub</span>

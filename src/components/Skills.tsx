@@ -28,7 +28,7 @@ const Skills = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-4">
             Skills & Expertise
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full shadow-lg shadow-amber-400/50"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-amber-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-lg text-[#d4d4d4] max-w-2xl mx-auto">
             Technologies and tools I work with to bring ideas to life
           </p>
@@ -43,7 +43,7 @@ const Skills = () => {
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
               {/* Category Card */}
-              <div className="h-full p-6 rounded-2xl bg-[#2d2d2d] border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-amber-400/20 hover:scale-105">
+              <div className="h-full p-6 rounded-2xl bg-white dark:bg-[#2d2d2d] border border-amber-400/20 hover:border-amber-400/50 transition-all duration-300 hover:scale-105">
                 {/* Category Title */}
                 <h3 className="text-xl font-bold text-amber-400 mb-6 flex items-center">
                   <span className="w-2 h-2 bg-gradient-to-r from-amber-400 to-amber-500 rounded-full mr-3 animate-pulse"></span>
