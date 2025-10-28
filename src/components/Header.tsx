@@ -58,7 +58,7 @@ const Header = ({ activeSection }: HeaderProps) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-[#1a1a1a]/90 backdrop-blur-xl shadow-2xl shadow-amber-400/10 border-b border-amber-400/10'
+          ? 'bg-white/90 dark:bg-[#1a1a1a]/90 backdrop-blur-xl border-b border-amber-400/10'
           : 'bg-transparent'
       }`}
     >
@@ -74,10 +74,9 @@ const Header = ({ activeSection }: HeaderProps) => {
             className="group flex items-center gap-3 text-2xl font-display font-bold hover:scale-105 transition-all duration-300"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-amber-400 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
-              <Sparkles className="relative w-8 h-8 text-amber-400" />
+              <Sparkles className="w-8 h-8 text-amber-500 dark:text-amber-400 group-hover:text-amber-600 dark:group-hover:text-amber-300 transition-colors animate-pulse" />
             </div>
-            <span className="bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 bg-clip-text text-transparent">My Portfolio</span>
+            <span className="bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 dark:from-amber-400 dark:via-amber-300 dark:to-amber-500 bg-clip-text text-transparent">My Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
