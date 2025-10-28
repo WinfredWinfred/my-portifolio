@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a]"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-[#1a1a1a] via-[#2d2d2d] to-[#1a1a1a] pt-20"
     >
       {/* Dot Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-10"></div>
