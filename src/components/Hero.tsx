@@ -17,20 +17,23 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-[#1a1a1a] dark:via-[#2d2d2d] dark:to-[#1a1a1a] pt-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-gray-100 to-white dark:from-[#0d0d0d] dark:via-[#1a1a1a] dark:to-[#0d0d0d] pt-20"
     >
+      {/* Dark Overlay for Better Contrast */}
+      <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+      
       {/* Dot Grid Pattern Overlay */}
-      <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-10"></div>
+      <div className="absolute inset-0 bg-dot-pattern bg-dot-size opacity-5 dark:opacity-10"></div>
       
       {/* Animated Background Blobs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-amber-400 to-amber-500 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-float"></div>
-        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-violet-500 to-purple-600 rounded-full mix-blend-screen filter blur-3xl opacity-25 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-amber-400 to-violet-500 rounded-full mix-blend-screen filter blur-3xl opacity-15 animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-20 -right-20 w-[600px] h-[600px] bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-full mix-blend-lighten dark:mix-blend-screen filter blur-3xl opacity-30 dark:opacity-20 animate-float"></div>
+        <div className="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-gradient-to-tr from-amber-600/25 to-amber-500/25 rounded-full mix-blend-lighten dark:mix-blend-screen filter blur-3xl opacity-25 dark:opacity-15 animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 left-1/3 w-[400px] h-[400px] bg-gradient-to-br from-orange-500/20 to-amber-600/20 rounded-full mix-blend-lighten dark:mix-blend-screen filter blur-3xl opacity-20 dark:opacity-10 animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
       
       {/* Noise Texture Overlay */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-30"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=')] opacity-10 dark:opacity-20"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
@@ -123,10 +126,9 @@ const Hero = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative text-gray-400 hover:text-amber-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1"
+                className="relative p-4 rounded-full bg-white dark:bg-[#2d2d2d] border-2 border-amber-400/30 text-amber-500 dark:text-amber-400 hover:border-amber-500 hover:bg-amber-50 dark:hover:bg-[#3a3a3a] hover:scale-110 transition-all duration-300 group"
                 aria-label={social.label}
               >
-                <div className="absolute inset-0 bg-amber-400 rounded-full blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <div className="relative">{social.icon}</div>
               </a>
             ))}
