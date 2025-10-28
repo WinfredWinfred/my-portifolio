@@ -4,19 +4,21 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-100 dark:bg-gray-900;
+  @apply bg-dark-900;
 }
 
 ::-webkit-scrollbar-thumb {
   @apply bg-gradient-to-b from-primary-500 to-secondary-500 rounded-full;
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply from-primary-600 to-secondary-600;
+  @apply from-primary-400 to-secondary-400;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.5);
 }
 
 /* Smooth scrolling */
@@ -33,16 +35,17 @@ body {
 
 /* Selection color */
 ::selection {
-  @apply bg-primary-500 text-white;
+  @apply bg-primary-400 text-dark-900;
 }
 
 ::-moz-selection {
-  @apply bg-primary-500 text-white;
+  @apply bg-primary-400 text-dark-900;
 }
 
 /* Focus styles */
 *:focus-visible {
-  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900;
+  @apply outline-none ring-2 ring-primary-400 ring-offset-2 ring-offset-dark-900;
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
 }
 
 /* Animations */
@@ -105,16 +108,18 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-primary-400 via-primary-300 to-secondary-400 bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: gradient 8s ease infinite;
 }
 
 /* Glass morphism effect */
 .glass {
-  @apply bg-white/10 backdrop-blur-md border border-white/20;
+  @apply bg-dark-800/50 backdrop-blur-xl border border-primary-500/20;
 }
 
-.glass-dark {
-  @apply bg-gray-900/10 backdrop-blur-md border border-gray-800/20;
+.glass-hover {
+  @apply bg-dark-800/50 backdrop-blur-xl border border-primary-500/20 hover:bg-dark-700/50 hover:border-primary-400/50 transition-all duration-300;
 }
 
 /* Card hover effect */
@@ -124,11 +129,11 @@ body {
 
 /* Button styles */
 .btn-primary {
-  @apply px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300;
+  @apply px-8 py-4 bg-gradient-to-r from-primary-500 via-primary-400 to-secondary-500 text-dark-900 font-bold rounded-xl hover:shadow-2xl hover:shadow-primary-500/50 hover:scale-105 transition-all duration-300;
 }
 
 .btn-secondary {
-  @apply px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 hover:scale-105 transition-all duration-300;
+  @apply px-8 py-4 bg-dark-800/50 backdrop-blur-xl border-2 border-primary-500/30 text-primary-400 font-bold rounded-xl hover:bg-dark-700/50 hover:border-primary-400 hover:scale-105 transition-all duration-300;
 }
 
 /* Loading spinner */

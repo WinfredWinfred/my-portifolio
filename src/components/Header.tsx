@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun, Hexagon } from 'lucide-react';
+import { Menu, X, Moon, Sun, Sparkles } from 'lucide-react';
 
 interface HeaderProps {
   activeSection: string;
@@ -42,14 +42,14 @@ const Header = ({ activeSection }: HeaderProps) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+          ? 'bg-dark-900/90 backdrop-blur-xl shadow-2xl shadow-primary-500/10 border-b border-primary-500/10'
           : 'bg-transparent'
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a
             href="#home"
@@ -57,14 +57,17 @@ const Header = ({ activeSection }: HeaderProps) => {
               e.preventDefault();
               scrollToSection('#home');
             }}
-            className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="group flex items-center gap-3 text-2xl font-display font-bold hover:scale-105 transition-all duration-300"
           >
-            <Hexagon className="w-7 h-7 text-primary-500 fill-primary-500/20" />
-            <span>My Portfolio</span>
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary-400 rounded-lg blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <Sparkles className="relative w-8 h-8 text-primary-400" />
+            </div>
+            <span className="bg-gradient-to-r from-primary-400 via-primary-300 to-secondary-400 bg-clip-text text-transparent">My Portfolio</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -73,10 +76,10 @@ const Header = ({ activeSection }: HeaderProps) => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className={`text-sm font-medium transition-colors hover:text-primary-500 ${
+                className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group ${
                   activeSection === item.href.slice(1)
-                    ? 'text-primary-500'
-                    : 'text-gray-700 dark:text-gray-300'
+                    ? 'text-primary-400'
+                    : 'text-dark-200 hover:text-primary-300'
                 }`}
               >
                 {item.label}

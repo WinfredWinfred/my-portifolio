@@ -205,8 +205,8 @@ export const experiences: Experience[] = [
 
 // Contact Information
 export const contactInfo: ContactInfo = {
-  email: 'your.email@example.com',
-  phone: '+1 (555) 123-4567',
-  location: 'San Francisco, CA',
+  email: 'winfrednsooli@gmail.com',
+  phone: '+256 752674690 / +256 761685359',
+  location: 'Kampala, Uganda',
   availability: 'Available for freelance work'
 };
