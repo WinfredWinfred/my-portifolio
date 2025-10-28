@@ -34,6 +34,17 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
         <div className="flex flex-col items-center text-center space-y-8 animate-fade-in">
+          {/* Profile Image Icon */}
+          <div className="relative group animate-scale-in">
+            <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-full blur-lg opacity-40 group-hover:opacity-60 animate-glow transition duration-500"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-full opacity-75 animate-spin" style={{ animationDuration: '8s' }}></div>
+            <img
+              src="/IMGP9895~3.jpg"
+              alt="Profile"
+              className="relative w-24 h-24 md:w-28 md:h-28 rounded-full border-2 border-[#1a1a1a] object-cover shadow-2xl shadow-amber-400/30 ring-2 ring-amber-400/50"
+            />
+          </div>
+
           {/* Name and Title */}
           <div className="space-y-4">
             <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold leading-none tracking-tight">
