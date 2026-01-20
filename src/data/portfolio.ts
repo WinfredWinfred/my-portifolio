@@ -3,8 +3,8 @@ import { PersonalInfo, SocialLink, SkillCategory, Project, Experience, ContactIn
 // Personal Information
 export const personalInfo: PersonalInfo = {
   name: 'Winfred',
-  title: 'Web3 Full Stack Developer',
-  bio: 'I am a Passionate Web3 developer specializing in blockchain technology and decentralized applications. I build innovative solutions that bridge traditional web development with the decentralized future.',
+  title: 'Full Stack Developer',
+  bio: 'I am a professional full stack developer with expertise in building responsive frontend interfaces, scalable backend systems, and blockchain-based applications. I specialize in creating seamless user experiences across modern web technologies, with a passion for clean code, innovative solutions, and continuous learning.',
   avatar: '/avatar.jpg',
   resumeUrl: '/resume.pdf'
 };
