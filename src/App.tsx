@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -14,7 +15,7 @@ function App() {
   // Handle scroll-based active section detection
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'skills', 'projects', 'experience', 'contact'];
+      const sections = ['home', 'skills', 'projects', 'experience', 'education', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
@@ -67,6 +68,7 @@ function App() {
         <Skills />
         <Projects />
         <Experience />
+        <Education />
         <Contact />
       </main>
 

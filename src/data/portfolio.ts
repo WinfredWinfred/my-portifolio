@@ -1,4 +1,4 @@
-import { PersonalInfo, SocialLink, SkillCategory, Project, Experience, ContactInfo } from '../types';
+import { PersonalInfo, SocialLink, SkillCategory, Project, Experience, ContactInfo, Education } from '../types';
 
 // Personal Information
 export const personalInfo: PersonalInfo = {
@@ -177,3 +177,37 @@ export const contactInfo: ContactInfo = {
   location: 'Kampala, Uganda',
   availability: 'Open to Frontend & Full Stack opportunities'
 };
+
+// Education Background
+export const education: Education[] = [
+  {
+    id: '1',
+    institution: 'Makerere University',
+    degree: 'Bachelor of Science in Software Engineering',
+    field: 'Software Engineering',
+    startDate: '2020',
+    endDate: '2024',
+    description: 'Comprehensive study of software development principles, algorithms, data structures, and system design.',
+    achievements: [
+      'Specialized in web development and database management',
+      'Completed multiple software development projects using modern technologies',
+      'Participated in coding competitions and hackathons'
+    ]
+  },
+  {
+    id: '2',
+    institution: 'Coursera',
+    degree: 'Professional Certificates',
+    field: 'Web Development & Programming',
+    startDate: '2022',
+    endDate: '2023',
+    description: 'Specialized courses in modern web development technologies and best practices.',
+    achievements: [
+      'React - The Complete Guide (incl Hooks, React Router, Redux)',
+      'Node.js, Express, MongoDB & More: The Complete Bootcamp',
+      'JavaScript - The Complete Guide 2023 (Beginner + Advanced)',
+      'Python for Everybody Specialization',
+      'Responsive Web Design Certification'
+    ]
+  }
+];

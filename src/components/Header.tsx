@@ -19,6 +19,7 @@ const Header = ({ activeSection }: HeaderProps) => {
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
+    { label: 'Education & Certifications', href: '#education' },
     { label: 'Contact', href: '#contact' }
   ];
 
