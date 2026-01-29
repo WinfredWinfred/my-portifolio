@@ -112,12 +112,21 @@ export const projects: Project[] = [
   },
   {
     id: '3',
+    title: 'School Management System',
+    description: 'A comprehensive school management platform for administrators, teachers, students, and parents.',
+    longDescription: 'A full-featured school management system that handles student records, attendance, grading, and communication between school staff and parents.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Material-UI'],
+    liveUrl: 'https://schoolmanagementsystemgroupwork.netlify.app/',
+    featured: true
+  },
+  {
+    id: '4',
     title: 'Nife Transport Services',
     description: 'A transport and logistics booking platform with real-time tracking.',
     longDescription: 'A comprehensive transport services platform enabling users to book rides, track shipments, and manage logistics operations efficiently.',
     technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB'],
     liveUrl: 'https://nife-transport-services-virid.vercel.app/',
-    featured: true
+    featured: false
   }
 ];
 
@@ -144,17 +153,19 @@ export const experiences: Experience[] = [
   {
     id: '2',
     company: 'Nehemiah Stem Research',
-    role: 'Frontend Developer (Part-time)',
+    role: 'Full Stack Developer (Part-time)',
     duration: 'Part-time',
     startDate: '2024-01',
-    description: 'Contributing frontend expertise to research projects and applications',
+    description: 'Contributing full stack development expertise to research projects and applications',
     responsibilities: [
-      'Design and implement responsive user interfaces for research platforms',
-      'Build interactive components using React and modern JavaScript frameworks',
-      'Collaborate with researchers and backend teams on project requirements',
-      'Optimize user experience and application performance for research tools'
+      'Frontend Development: Design and implement responsive user interfaces for research platforms',
+      'Backend Development: Build and maintain APIs and server-side logic for research tools',
+      'Database Design: Develop and optimize database structures for data management',
+      'Full Stack Solutions: Develop end-to-end features using modern web technologies',
+      'Collaborate with researchers and team members on project requirements and technical implementations',
+      'Optimize user experience and application performance for research platforms'
     ],
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'Next.js'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'Next.js', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL'],
     current: true
   }
 ];
